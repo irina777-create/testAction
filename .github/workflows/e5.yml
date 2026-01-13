@@ -37,7 +37,7 @@ jobs:
         -H "X-Api-Key: ${{ secrets.POSTMAN_API_KEY }}" \
         -o env.json
 
-       - name: Run Postman Collection
+     - name: Run Postman Collection
     run: |
       newman run "https://api.getpostman.com/collections/1911365-1a4e032c-530f-422a-a669-ab37949cbc15?apikey=${{ secrets.POSTMAN_API_KEY }}" \
       -e env.json \
