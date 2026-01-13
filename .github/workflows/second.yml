@@ -12,7 +12,7 @@ jobs:
     steps:
       # Шаг 1: Checkout кода репозитория
       - name: Checkout repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       # Шаг 2: Установить Node.js (поскольку newman — это Node.js пакет)
       - name: Set up Node.js
@@ -38,7 +38,7 @@ jobs:
 
       # Шаг 5: Сохранить отчет о выполнении
       - name: Upload Test Results
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: Report result
           path: testResult
