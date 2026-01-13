@@ -21,7 +21,8 @@ jobs:
 
       # Шаг 2: Установить Node.js (поскольку newman — это Node.js пакет)
       - name: Set up Node.js
-        uses: actions/setup-node@v4
+        uses: actions/upload-artifact@v4
+
         with:
           node-version: '20.x' # или другая версия, которая вам нужна
 
@@ -43,7 +44,7 @@ jobs:
 
       # Шаг 5: Сохранить отчет о выполнении
       - name: Upload Test Results
-        uses: actions/upload-artifact@v3
+        uses: actions/download-artifact@v4
         with:
           name: Report result
           path: testResult
